@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/apple-icon.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -16,8 +18,15 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Nucleo Icons -->
+    <link href="{{asset('css/nucleo-icons.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/nucleo-svg.css')}}" rel="stylesheet" />
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{{asset('css/material-dashboard.css?v=3.0.0')}}" rel="stylesheet" />
 </head>
 <body>
     <div id="app">
@@ -84,5 +93,11 @@
             @yield('content')
         </main>
     </div>
+
+    <!--   Core JS Files   -->
+    <script src="{{asset('js/core/popper.min.js')}}"></script>
+    <script src="{{asset('js/core/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/plugins/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{asset('js/plugins/smooth-scrollbar.min.js')}}"></script>
 </body>
 </html>
